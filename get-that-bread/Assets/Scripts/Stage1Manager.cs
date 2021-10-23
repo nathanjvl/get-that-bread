@@ -7,7 +7,7 @@ public class Stage1Manager : MonoBehaviour
     // This script will be used in order to keep track of the stage 1 progress and update the UI elements
     // Main implementation through count variables
 
-    // these should include all 3 game object related to the health
+    // replace this with the UI components for the hearts and counts
     public GameObject[] hearts;
 
     // The goal number for each ingredient
@@ -30,7 +30,7 @@ public class Stage1Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //
+        // display the counts on the UI
 
     }
 }
