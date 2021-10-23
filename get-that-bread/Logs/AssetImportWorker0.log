@@ -160,3 +160,11 @@ Received Import Request.
 Start importing Assets/Sprites/Stage 1/GTB Yeast.png using Guid(35bce8f4d832aa346972a0a2ca7d2af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa340451ec610cd6d70f3e76f1295f5') in 0.017004 seconds 
   Import took 0.024147 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 44.106666 seconds.
+  path: Assets/Sprites/Stage 1/Life Bread.png
+  artifactKey: Guid(d7bb6c2cb9ee0fd4aa3ff4ec5f6db7fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Stage 1/Life Bread.png using Guid(d7bb6c2cb9ee0fd4aa3ff4ec5f6db7fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27dac2b475c0af9063d4300bc574ec67') in 0.018348 seconds 
+  Import took 0.025735 seconds .
+
