@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 692125129}
   m_Layer: 0
   m_Name: Stage 1 Manager
-  m_TagString: Untagged
+  m_TagString: Mold
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1776,6 +1776,7 @@ MonoBehaviour:
   - {fileID: 5519108783883022834, guid: 62d7f0e435d954744b0a11b84d020b0c, type: 3}
   - {fileID: 2053950554848023015, guid: 232db3e88a06a454aa176545dd42639b, type: 3}
   - {fileID: 1330386408744047478, guid: fecc9d992e99dd441a22143c3242ad10, type: 3}
+  - {fileID: 427654265944738266, guid: 94e7fb032c8730746aa65e961b1d4c50, type: 3}
   - {fileID: 427654265944738266, guid: 94e7fb032c8730746aa65e961b1d4c50, type: 3}
   scale: 0.2
 --- !u!4 &1557276596

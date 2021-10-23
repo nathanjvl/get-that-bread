@@ -5,6 +5,7 @@ using UnityEngine;
 public class FallingObjectSpawn : MonoBehaviour
 {
     //x axis range of object spawning
+
     public float range;
 
     public GameObject[] collectables;
@@ -12,6 +13,9 @@ public class FallingObjectSpawn : MonoBehaviour
     private float random;
 
     public float scale;
+
+    // this is set to true but can be false to stop spawning
+    public bool can_spawn = true;
 
     // Start is called before the first frame update
     void Start()
@@ -29,17 +33,20 @@ public class FallingObjectSpawn : MonoBehaviour
     void Update()
     {
         //if random timer is 0 spawn object
-
-        if (random > 0)
+        if(can_spawn)
         {
-            random -= Time.deltaTime;
-        } else
-        {
-            random = Random.Range(1, 5);
-            Debug.Log("Spawned Object");
-            GameObject currentCollectable = Instantiate(collectables[(int)Random.Range(0, 2.99f)]);
-            currentCollectable.transform.localPosition = new Vector2(Random.Range(range * -1, range), 10);
-            currentCollectable.transform.localScale = Vector3.one * scale;
+            if (random > 0)
+            {
+                random -= Time.deltaTime;
+            } else
+            {
+                random = Random.Range(1, 5);
+                Debug.Log("Spawned Object");
+                GameObject currentCollectable = Instantiate(collectables[(int)Random.Range(0, 4.99f)]);
+                currentCollectable.transform.localPosition = new Vector2(Random.Range(range * -1, range), 10);
+                currentCollectable.transform.localScale = Vector3.one * scale;
+            }
         }
+
     }
 }

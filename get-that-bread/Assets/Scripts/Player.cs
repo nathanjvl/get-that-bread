@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
             stage1Manager.GetComponent<Stage1Manager>().yeast_count++;
         }
 
-        if (collision.transform.tag == "Trash")
+        if (collision.transform.tag == "Mold")
         {
             stage1Manager.GetComponent<Stage1Manager>().trash_count++;
         }
