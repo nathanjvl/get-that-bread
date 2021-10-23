@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 35e6a26d7daf8d54b9ae713933d9aeb1
-=======
-<<<<<<< HEAD:get-that-bread/Assets/Sprites/Stage 1/get_that_bread_assets_bread_boi_happy_catch.png.meta
-guid: f9361a05607ce824d9fd54916ddc6a69
-=======
-guid: 35e6a26d7daf8d54b9ae713933d9aeb1
->>>>>>> fca5dca566d63452f832b4430295288bc20067e1:get-that-bread/Assets/Sprites/Stage 1/GTB Fail.png.meta
->>>>>>> fca5dca566d63452f832b4430295288bc20067e1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -41,7 +33,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 1
-    aniso: 2
+    aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
@@ -69,7 +61,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -96,31 +88,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 8192
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
+    buildTarget: WebGL
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
