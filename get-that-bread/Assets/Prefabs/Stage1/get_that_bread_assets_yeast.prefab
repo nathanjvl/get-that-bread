@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5097157315875382510}
   m_Layer: 0
   m_Name: get_that_bread_assets_yeast
-  m_TagString: Untagged
+  m_TagString: Yeast
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
