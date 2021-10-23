@@ -77,7 +77,23 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.name == "Floor")
+        {
+            floor = true;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.name == "Floor")
+        {
+            floor = false;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.transform.name == "Floor")
         {
