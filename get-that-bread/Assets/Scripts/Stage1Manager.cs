@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Stage1Manager : MonoBehaviour
 {
     // This script will be used in order to keep track of the stage 1 progress and update the UI elements
     // Main implementation through count variables
 
-    // replace this with the UI components for the hearts and counts
-    public GameObject[] hearts;
 
     // The goal number for each ingredient
-    public int milk_goal;
-    public int yeast_goal;
-    public int flour_goal;
+    public int milk_goal = 5;
+    public int yeast_goal = 3;
+    public int flour_goal = 7;
     public int life_amount = 3; // we can set this --> must match # of hearts
 
     // Counts for each type of ingredient collected
@@ -21,6 +20,12 @@ public class Stage1Manager : MonoBehaviour
     public int yeast_count = 0;
     public int flour_count = 0;
     public int trash_count = 0;
+
+    //images with the hearts / bread life
+    public Image[] lives;
+
+    //declares the text for the counts
+    public Text[] counts;
 
     void Start()
     {
@@ -31,6 +36,18 @@ public class Stage1Manager : MonoBehaviour
     void Update()
     {
         // display the counts on the UI
+        if (milk_count < milk_goal)
+        {
+            counts[0].text = milk_count.ToString();
+        }
+        if (yeast_count < yeast_goal)
+        {
+            counts[1].text = yeast_count.ToString();
+        }
+        if (flour_count < flour_goal)
+        {
+            counts[2].text = flour_count.ToString();
+        }
 
     }
 }
