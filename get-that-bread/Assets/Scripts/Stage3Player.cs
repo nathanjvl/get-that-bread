@@ -7,10 +7,19 @@ public class Stage3Player : MonoBehaviour
     private float y;
     public float up;
 
+    public GameObject obstacle;
+
+    private float obstacleTime;
+    private float randomTime;
+
+    public float obstacleSpeed;
+    private bool hit;
+
     // Start is called before the first frame update
     void Start()
     {
         y = -2;
+        obstacleTime = 5;
     }
 
     // Update is called once per frame
@@ -42,6 +51,43 @@ public class Stage3Player : MonoBehaviour
             {
                 y = -2;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            hit = true;
+        }
+
+        //subtract time from timers
+
+        if (obstacleTime > 0.1f)
+        {
+            obstacleTime -= Time.deltaTime / 15;
+        } else
+        {
+            obstacleTime = 0.1f;
+        }
+
+        
+
+        if (randomTime > 0)
+        {
+            randomTime -= Time.deltaTime;
+        } else
+        {
+            //spawn obstacle
+            randomTime = Random.Range(obstacleTime, obstacleTime * 2);
+            GameObject o = Instantiate(obstacle);
+            o.transform.localPosition = new Vector3(-10, Random.Range(-2, -2 + up), 0);
+            o.GetComponent<Rigidbody2D>().velocity = Vector2.right * obstacleSpeed;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Obstacle")
+        {
+            Destroy(collision);
         }
     }
 }
