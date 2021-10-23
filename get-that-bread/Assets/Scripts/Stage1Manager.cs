@@ -38,16 +38,36 @@ public class Stage1Manager : MonoBehaviour
         // display the counts on the UI
         if (milk_count < milk_goal)
         {
-            counts[0].text = milk_count.ToString();
+            counts[0].text = (milk_goal - milk_count).ToString();
         }
         if (yeast_count < yeast_goal)
         {
-            counts[1].text = yeast_count.ToString();
+            counts[1].text = (yeast_goal - yeast_count).ToString();
         }
         if (flour_count < flour_goal)
         {
-            counts[2].text = flour_count.ToString();
+            counts[2].text = (flour_goal - flour_count).ToString();
         }
 
+        if (trash_count < life_amount)
+        {
+            if (trash_count >= 1)
+            {
+                lives[2].enabled = false;
+            }
+            if (trash_count >= 2)
+            {
+                lives[1].enabled = false;
+            }
+            if (trash_count >= 3)
+            {
+                lives[0].enabled = false;
+            }
+
+
+        } else {
+            //this is the case where trash_count == life_amount so game over!
+
+        }
     }
 }

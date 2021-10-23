@@ -7,6 +7,7 @@ TagManager:
   - Milk
   - Flour
   - Yeast
+  - Mold
   layers:
   - Default
   - TransparentFX
