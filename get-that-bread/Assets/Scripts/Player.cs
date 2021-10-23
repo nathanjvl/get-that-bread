@@ -21,12 +21,12 @@ public class Player : MonoBehaviour
     {
         //change velocity if player pushes certain button
 
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             r.velocity = new Vector2(speed * -1, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             r.velocity = new Vector2(speed, 0);
         }
