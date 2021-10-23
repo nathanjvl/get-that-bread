@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Stage1Manager : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class Stage1Manager : MonoBehaviour
     public int flour_count = 0;
     public int trash_count = 0;
 
+    //declares the text for the counts
+    public Text[] counts;
+
     void Start()
     {
 
@@ -31,6 +35,8 @@ public class Stage1Manager : MonoBehaviour
     void Update()
     {
         // display the counts on the UI
+
+        counts[0].text = milk_count.ToString();
 
     }
 }
