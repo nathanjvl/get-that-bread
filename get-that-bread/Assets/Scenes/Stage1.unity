@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df65552d5aed349528a6de722cee12aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
 --- !u!61 &85715400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 655747179}
   - component: {fileID: 655747180}
   m_Layer: 0
-  m_Name: get_that_bread_assets_rectangle
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd405aa0aa2946c69c370fde5af46d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
+  range: 10
   collectables:
   - {fileID: 5519108783883022834, guid: 62d7f0e435d954744b0a11b84d020b0c, type: 3}
   - {fileID: 2053950554848023015, guid: 232db3e88a06a454aa176545dd42639b, type: 3}

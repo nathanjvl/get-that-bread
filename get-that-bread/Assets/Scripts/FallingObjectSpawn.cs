@@ -11,11 +11,18 @@ public class FallingObjectSpawn : MonoBehaviour
 
     private float random;
 
+    public float scale;
+
     // Start is called before the first frame update
     void Start()
     {
         //sets random value
         random = Random.Range(1, 5);
+
+        if (scale <= 0)
+        {
+            scale = 1;
+        }
     }
 
     // Update is called once per frame
@@ -31,7 +38,8 @@ public class FallingObjectSpawn : MonoBehaviour
             random = Random.Range(1, 5);
             Debug.Log("Spawned Object");
             GameObject currentCollectable = Instantiate(collectables[(int)Random.Range(0, 2.99f)]);
-            currentCollectable.transform.localPosition = new Vector2(Random.Range(range * -1, range), 5);
+            currentCollectable.transform.localPosition = new Vector2(Random.Range(range * -1, range), 10);
+            currentCollectable.transform.localScale = Vector3.one * scale;
         }
     }
 }
