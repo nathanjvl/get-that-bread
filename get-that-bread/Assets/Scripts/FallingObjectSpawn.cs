@@ -29,6 +29,9 @@ public class FallingObjectSpawn : MonoBehaviour
         } else
         {
             random = Random.Range(1, 5);
+            Debug.Log("Spawned Object");
+            GameObject currentCollectable = Instantiate(collectables[(int)Random.Range(0, 2.99f)]);
+            currentCollectable.transform.localPosition = new Vector2(Random.Range(range * -1, range), 5);
         }
     }
 }
