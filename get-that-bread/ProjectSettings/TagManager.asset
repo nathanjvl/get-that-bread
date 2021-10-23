@@ -8,6 +8,7 @@ TagManager:
   - Flour
   - Yeast
   - Mold
+  - Obstacle
   layers:
   - Default
   - TransparentFX
