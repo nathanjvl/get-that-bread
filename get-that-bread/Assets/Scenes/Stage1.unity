@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -202,8 +202,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85715395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: -1.95, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -960,7 +960,10 @@ MonoBehaviour:
   yeast_count: 0
   flour_count: 0
   trash_count: 0
-  lives: []
+  lives:
+  - {fileID: 1304585325}
+  - {fileID: 801965590}
+  - {fileID: 1591649007}
   counts:
   - {fileID: 661600557}
   - {fileID: 1106108455}
@@ -1426,7 +1429,7 @@ MonoBehaviour:
   - {fileID: 5519108783883022834, guid: 62d7f0e435d954744b0a11b84d020b0c, type: 3}
   - {fileID: 2053950554848023015, guid: 232db3e88a06a454aa176545dd42639b, type: 3}
   - {fileID: 1330386408744047478, guid: fecc9d992e99dd441a22143c3242ad10, type: 3}
-  scale: 0.5
+  scale: 0.2
 --- !u!4 &1557276596
 Transform:
   m_ObjectHideFlags: 0
