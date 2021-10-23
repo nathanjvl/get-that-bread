@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2053950554848023013}
   - component: {fileID: 2053950554848023012}
   - component: {fileID: 4018802464564933931}
+  - component: {fileID: -6702863924910421694}
   m_Layer: 0
   m_Name: get_that_bread_assets_milk
   m_TagString: Untagged
@@ -131,3 +132,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-6702863924910421694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053950554848023015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4054eb440a247ec906bdd73c56f500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
