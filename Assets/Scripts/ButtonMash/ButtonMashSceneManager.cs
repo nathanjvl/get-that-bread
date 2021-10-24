@@ -7,21 +7,54 @@ using UnityEngine.SceneManagement;
 public class ButtonMashSceneManager : MonoBehaviour
 {
 
+    public int winCount;
+    private int count;
+
+    private float timer;
+    private float currentTimer;
+
     // The transition animator that is used for the fade in and out;
     public Animator transition;
 
     // Start is called before the first frame update
     void Start()
     {
-        // THIS IS TEMPORARY SO WE CAN GET THROUGH ALL scenes
-        StartCoroutine(TransitionToWin());
-        // DELETE THE LINE ABOVE CALLING WIN
+        count = winCount / 2;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            count++;
 
+            //temporary
+            Debug.Log(count);
+        }
+
+        if (count >= winCount)
+        {
+            StartCoroutine(TransitionToWin());
+        } else if (count >= winCount * 0.75f)
+        {
+            timer = 0.15f;
+        } else if (count >= winCount * 0.5f)
+        {
+            timer = 0.2f;
+        } else if (count >= winCount * 0.25f)
+        {
+            timer = 0.5f;
+        }
+
+        if (currentTimer < timer)
+        {
+            currentTimer += Time.deltaTime;
+        } else
+        {
+            currentTimer = 0;
+            count--;
+        }
     }
 
     //Call when the player wins
