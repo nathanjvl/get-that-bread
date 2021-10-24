@@ -9,7 +9,7 @@ public class Stage3Player : MonoBehaviour
     private float y;
     public float up;
 
-    public GameObject obstacle;
+    public GameObject obstacle; // Prefab for smaller monters
 
     private float obstacleTime;
     private float randomTime;
@@ -17,13 +17,16 @@ public class Stage3Player : MonoBehaviour
     public float obstacleSpeed;
     private bool hit;
 
-    public GameObject hitbox;
+    public GameObject hitbox; // The activation for punch animation
 
     private int health;
     private float delay;
 
     private int height;
     private float cooldown;
+
+    //The player character's animator
+    public Animator playerAnim;
 
     // Start is called before the first frame update
     void Start()
@@ -38,11 +41,10 @@ public class Stage3Player : MonoBehaviour
     void Update()
     {
         //player up and down
-
         transform.localPosition = new Vector3(transform.localPosition.x, y, transform.localPosition.z);
 
         //checks to make sure y position is within the range
-
+        //Handling moving position up
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             if (height < 2 && cooldown > movementInDelay)
@@ -57,6 +59,7 @@ public class Stage3Player : MonoBehaviour
             y = -2 + (height * 2);
         }
 
+        //Handling moving position down
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             if (height > 0 && cooldown > movementInDelay)
@@ -71,6 +74,7 @@ public class Stage3Player : MonoBehaviour
             y = -2 + (height * 2);
         }
 
+        /* OLD: Space to hit implementation
         if (Input.GetKeyDown(KeyCode.Space))
         {
             hit = true;
@@ -86,12 +90,9 @@ public class Stage3Player : MonoBehaviour
                 hit = false;
                 hitbox.SetActive(false);
             }
-
-
-        }
+        }*/
 
         //subtract time from timers
-
         if (obstacleTime > 0.1f)
         {
             obstacleTime -= Time.deltaTime / 15;
@@ -101,7 +102,7 @@ public class Stage3Player : MonoBehaviour
         }
 
 
-
+        // HANDLING THE MONSTER SPAWNING SYSTEM
         if (randomTime > 0)
         {
             randomTime -= Time.deltaTime;
@@ -121,29 +122,21 @@ public class Stage3Player : MonoBehaviour
     {
         if (collision.transform.tag == "Obstacle")
         {
-            Destroy(collision.gameObject);
-            Debug.Log("Collided");
-
-            if (hit)
-            {
-                //sound effect
-            } else
-            {
-                LoseHealth();
-            }
-
-
+            //Effects handled in another script: player hit
+            Destroy(collision.gameObject); // This is when it collides with the player
+            Debug.Log("Collided with Player");
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    //OLD IMPLEMENTATION WITH SPACE
+    /*private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.transform.tag == "Obstacle" && hit)
         {
             Destroy(collision.gameObject);
             Debug.Log("Collided");
         }
-    }
+    }*/
 
     public void LoseHealth()
     {
