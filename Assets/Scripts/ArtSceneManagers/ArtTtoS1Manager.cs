@@ -10,6 +10,13 @@ public class ArtTtoS1Manager : MonoBehaviour
     // set their triggers and values so that we can have the camera
     // and other set pieces move around in time.
 
+    private int currentScene;
+    public float currentSceneMultiplier;
+
+    private float timer;
+
+    public GameObject c;
+
     // The transition animator that is used for the fade in and out;
     public Animator transition;
 
@@ -17,7 +24,35 @@ public class ArtTtoS1Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ArtT2S1()); // this will call the IEnumerator and start it
+        timer = 3;
+
+        if (timer <= 0)
+        {
+            timer = 3;
+            currentScene++;
+        }
+
+        //StartCoroutine(ArtT2S1()); this will call the IEnumerator and start it
+    }
+
+    void Update()
+    {
+        timer -= Time.deltaTime;
+
+        if (timer <= 0)
+        {
+            timer = 3;
+            currentScene++;
+        }
+
+        c.transform.position = Vector3.Lerp(c.transform.position, new Vector3(currentScene * currentSceneMultiplier, 0, -10), Time.deltaTime * 5);
+
+        if (currentScene >= 8)
+        {
+            StartCoroutine(ArtT2S1()); // this will call the IEnumerator and start it
+        }
+
+        
     }
 
     // This is where we can handle different timing to direct the camera
