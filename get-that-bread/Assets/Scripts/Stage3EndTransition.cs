@@ -19,4 +19,14 @@ public class Stage3EndTransition : MonoBehaviour
     {
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.name == "MonsterObjective")
+        {
+            Debug.Log("Will change scene now for button mash!");
+        }
+    }
+
+
 }

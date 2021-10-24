@@ -1384,7 +1384,7 @@ GameObject:
   - component: {fileID: 1289168188}
   - component: {fileID: 1289168190}
   m_Layer: 0
-  m_Name: Monster Move Objective
+  m_Name: MonsterObjective
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2669,7 +2669,7 @@ PrefabInstance:
       objectReference: {fileID: 1829633844}
     - target: {fileID: 1765085109187508206, guid: 0f05874e4688f5f43bf532b6ffb0294e, type: 3}
       propertyPath: obstacleSpeed
-      value: 0.25
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7814380883474151410, guid: 0f05874e4688f5f43bf532b6ffb0294e, type: 3}
       propertyPath: m_RootOrder
