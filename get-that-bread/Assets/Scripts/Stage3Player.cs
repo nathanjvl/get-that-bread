@@ -111,7 +111,7 @@ public class Stage3Player : MonoBehaviour
             randomTime = Random.Range(obstacleTime, obstacleTime * 2);
             GameObject o = Instantiate(obstacle);
             o.transform.localPosition = new Vector3(-10, -2 + ((int)Random.Range(0, 2.99f) * 2), 0);
-            o.GetComponent<Rigidbody2D>().velocity = Vector2.right * obstacleSpeed;
+            o.GetComponent<Rigidbody2D>().velocity = Vector2.right * obstacleSpeed * Random.Range(1,4);
         }
 
         cooldown += Time.deltaTime;
