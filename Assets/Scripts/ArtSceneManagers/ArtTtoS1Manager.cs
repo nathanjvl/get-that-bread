@@ -24,11 +24,11 @@ public class ArtTtoS1Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = 3;
+        timer = 2;
 
         if (timer <= 0)
         {
-            timer = 3;
+            timer = 2;
             currentScene++;
         }
 
@@ -41,7 +41,7 @@ public class ArtTtoS1Manager : MonoBehaviour
 
         if (timer <= 0)
         {
-            timer = 3;
+            timer = 2;
             currentScene++;
         }
 
@@ -52,7 +52,7 @@ public class ArtTtoS1Manager : MonoBehaviour
             StartCoroutine(ArtT2S1()); // this will call the IEnumerator and start it
         }
 
-        
+
     }
 
     // This is where we can handle different timing to direct the camera
