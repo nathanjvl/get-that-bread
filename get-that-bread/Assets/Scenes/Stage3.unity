@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a930e0ca3804441dcafe5f6e1f9ffea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  up: 1
+  up: 3
   obstacle: {fileID: 346865383}
   obstacleSpeed: 2
   hitbox: {fileID: 1172898752}

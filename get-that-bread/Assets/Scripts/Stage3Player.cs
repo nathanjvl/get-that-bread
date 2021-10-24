@@ -42,22 +42,26 @@ public class Stage3Player : MonoBehaviour
         {
             if (y < -2 + up)
             {
-                y += Time.deltaTime * 2;
+                y += Time.deltaTime * 10;
             } else
             {
                 y = -2 + up;
             }
+
+            y = -2 + up;
         }
 
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             if (y > -2)
             {
-                y -= Time.deltaTime * 2;
+                y -= Time.deltaTime * 10;
             } else
             {
                 y = -2;
             }
+
+            y = -2;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -99,7 +103,7 @@ public class Stage3Player : MonoBehaviour
             //spawn obstacle
             randomTime = Random.Range(obstacleTime, obstacleTime * 2);
             GameObject o = Instantiate(obstacle);
-            o.transform.localPosition = new Vector3(-10, (int)(-2 + Random.Range(-0.99f, up - 0.01f)), 0);
+            o.transform.localPosition = new Vector3(-10, -2 + (int)(Random.Range(0, 1.99f) * 2), 0);
             o.GetComponent<Rigidbody2D>().velocity = Vector2.right * obstacleSpeed;
         }
     }
