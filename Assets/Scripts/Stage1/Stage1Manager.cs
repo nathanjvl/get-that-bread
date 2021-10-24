@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Stage1Manager : MonoBehaviour
 {
@@ -23,9 +24,11 @@ public class Stage1Manager : MonoBehaviour
 
     //images with the hearts / bread life
     public Image[] lives;
-
     //declares the text for the counts
     public Text[] counts;
+
+    // The transition animator that is used for the fade in and out;
+    public Animator transition;
 
     void Start()
     {
@@ -62,12 +65,22 @@ public class Stage1Manager : MonoBehaviour
             if (trash_count >= 3)
             {
                 lives[0].enabled = false;
+                // This is the game end sequence since player lost all lives
+                StartCoroutine(TransitionGameOver());
             }
-
-
-        } else {
-            //this is the case where trash_count == life_amount so game over!
-
         }
+    }
+
+    IEnumerator TransitionNextScene(){
+        transition.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(1); // pauses for 1 second
+        SceneManager.LoadScene("Title Screen");
+    }
+
+    IEnumerator TransitionGameOver(){
+        transition.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Title Screen");
+
     }
 }
