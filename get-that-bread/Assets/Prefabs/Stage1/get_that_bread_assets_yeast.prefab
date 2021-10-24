@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1330386408744047477}
   - component: {fileID: -4420942492578866905}
   - component: {fileID: 5097157315875382510}
+  - component: {fileID: 1630161498223901693}
   m_Layer: 0
   m_Name: get_that_bread_assets_yeast
   m_TagString: Yeast
@@ -142,5 +143,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c4054eb440a247ec906bdd73c56f500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1630161498223901693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330386408744047478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10002997967b6a04491ea946205548e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

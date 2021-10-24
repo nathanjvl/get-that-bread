@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 427654265944738268}
   - component: {fileID: 427654265944738267}
   - component: {fileID: -6682131056094523326}
+  - component: {fileID: -4645742277526011774}
   m_Layer: 0
   m_Name: get_that_bread_assets_moldy_bread
   m_TagString: Mold
@@ -142,5 +143,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c4054eb440a247ec906bdd73c56f500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4645742277526011774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427654265944738266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10002997967b6a04491ea946205548e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
