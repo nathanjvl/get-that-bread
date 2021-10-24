@@ -29,6 +29,8 @@ public class ButtonMashSceneManager : MonoBehaviour
         {
             count++;
 
+            //alternate between sprites here
+
             //temporary
             Debug.Log(count);
         }
