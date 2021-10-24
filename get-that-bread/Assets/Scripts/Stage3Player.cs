@@ -80,7 +80,7 @@ public class Stage3Player : MonoBehaviour
                 hitbox.SetActive(false);
             }
 
-            
+
         }
 
         //subtract time from timers
@@ -93,7 +93,7 @@ public class Stage3Player : MonoBehaviour
             obstacleTime = 0.1f;
         }
 
-        
+
 
         if (randomTime > 0)
         {
