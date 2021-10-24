@@ -2039,8 +2039,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ovenAnim: {fileID: 2069089587}
   s3manager: {fileID: 1541663782}
-  window_time: 2
-  qt_timer: 2
+  window_time: 3
+  qt_timer: 3
   randomTime: 5
   time_min: 5
   time_max: 10
