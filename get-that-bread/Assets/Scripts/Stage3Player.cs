@@ -20,6 +20,8 @@ public class Stage3Player : MonoBehaviour
     private int health;
     private float delay;
 
+    private int height;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,30 +40,30 @@ public class Stage3Player : MonoBehaviour
 
         //checks to make sure y position is within the range
 
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
-            if (y < -2 + up)
+            if (height < 2)
             {
-                y += Time.deltaTime * 10;
+                height++;
             } else
             {
-                y = -2 + up;
+                //y = -2 + up;
             }
 
-            y = -2 + up;
+            y = -2 + (height * 2);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
-            if (y > -2)
+            if (height > 0)
             {
-                y -= Time.deltaTime * 10;
+                height--;
             } else
             {
-                y = -2;
+                //y = -2;
             }
 
-            y = -2;
+            y = -2 + (height * 2);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -103,7 +105,7 @@ public class Stage3Player : MonoBehaviour
             //spawn obstacle
             randomTime = Random.Range(obstacleTime, obstacleTime * 2);
             GameObject o = Instantiate(obstacle);
-            o.transform.localPosition = new Vector3(-10, -2 + ((int)Random.Range(0, 1.99f) * 2), 0);
+            o.transform.localPosition = new Vector3(-10, -2 + ((int)Random.Range(0, 2.99f) * 2), 0);
             o.GetComponent<Rigidbody2D>().velocity = Vector2.right * obstacleSpeed;
         }
     }
