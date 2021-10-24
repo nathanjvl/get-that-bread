@@ -2324,6 +2324,7 @@ MonoBehaviour:
   - {fileID: 427654265944738266, guid: 94e7fb032c8730746aa65e961b1d4c50, type: 3}
   scale: 0.2
   can_spawn: 1
+  s1manager: {fileID: 692125129}
 --- !u!4 &1515622180
 Transform:
   m_ObjectHideFlags: 0
@@ -2376,6 +2377,7 @@ MonoBehaviour:
   - {fileID: 427654265944738266, guid: 94e7fb032c8730746aa65e961b1d4c50, type: 3}
   scale: 0.2
   can_spawn: 1
+  s1manager: {fileID: 692125129}
 --- !u!4 &1557276596
 Transform:
   m_ObjectHideFlags: 0

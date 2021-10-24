@@ -17,6 +17,8 @@ public class FallingObjectSpawn : MonoBehaviour
     // this is set to true but can be false to stop spawning
     public bool can_spawn = true;
 
+    public Stage1Manager s1manager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,28 @@ public class FallingObjectSpawn : MonoBehaviour
             {
                 random = Random.Range(1, 5);
                 Debug.Log("Spawned Object");
-                GameObject currentCollectable = Instantiate(collectables[(int)Random.Range(0, 4.99f)]);
+
+                int rand_generate_item = (int)Random.Range(0, 4.99f);
+
+                //checking if it's all collected, if yes, then set to trash
+                // 0: flour,  1: milk, 2: yeast, 3:trash, 4: trash
+
+                if (rand_generate_item == 1 && s1manager.milk_count >= s1manager.milk_goal)
+                {
+                    rand_generate_item = 3;
+                }
+                if (rand_generate_item == 2 && s1manager.yeast_count >= s1manager.yeast_goal)
+                {
+                    rand_generate_item = 3;
+                }
+                if (rand_generate_item == 0 && s1manager.flour_count >= s1manager.flour_goal)
+                {
+                    rand_generate_item = 3;
+                }
+
+                //int rand_generate_item = (int)Random.Range(0, 4.99f);
+                GameObject currentCollectable = Instantiate(collectables[rand_generate_item]);
+                //GameObject currentCollectable = Instantiate(collectables[(int)Random.Range(0, 4.99f)]);
                 currentCollectable.transform.localPosition = new Vector2(Random.Range(range * -1, range), 10);
                 currentCollectable.transform.localScale = Vector3.one * scale;
             }
