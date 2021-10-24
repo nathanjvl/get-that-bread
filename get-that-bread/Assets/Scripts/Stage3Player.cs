@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Stage3Player : MonoBehaviour
 {
+    public float movementInDelay = 0.5f;
+
     private float y;
     public float up;
 
@@ -43,7 +45,7 @@ public class Stage3Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
-            if (height < 2 && cooldown > 0.5f)
+            if (height < 2 && cooldown > movementInDelay)
             {
                 height++;
                 cooldown = 0;
@@ -57,7 +59,7 @@ public class Stage3Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
-            if (height > 0 && cooldown > 0.5f)
+            if (height > 0 && cooldown > movementInDelay)
             {
                 height--;
                 cooldown = 0;
