@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
 
     private GameObject stage1Manager;
 
+    public Animator playerAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,21 +55,25 @@ public class Player : MonoBehaviour
     {
         if (collision.transform.tag == "Milk")
         {
+            playerAnim.SetTrigger("Success");
             stage1Manager.GetComponent<Stage1Manager>().milk_count++;
         }
 
         if (collision.transform.tag == "Flour")
         {
+            playerAnim.SetTrigger("Success");
             stage1Manager.GetComponent<Stage1Manager>().flour_count++;
         }
 
         if (collision.transform.tag == "Yeast")
         {
+            playerAnim.SetTrigger("Success");
             stage1Manager.GetComponent<Stage1Manager>().yeast_count++;
         }
 
         if (collision.transform.tag == "Mold")
         {
+            playerAnim.SetTrigger("Fail");
             stage1Manager.GetComponent<Stage1Manager>().trash_count++;
         }
 
