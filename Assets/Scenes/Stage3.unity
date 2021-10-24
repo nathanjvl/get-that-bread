@@ -645,10 +645,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a480314ee81db04e9767a52c9b81645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementInDelay: 0.4
+  movementInDelay: 0.2
   up: 3
   obstacle: {fileID: 5379663206463762180, guid: 72a10d39c64684a758cdc55be501ce30, type: 3}
-  obstacleSpeed: 2
+  obstacleSpeed: 3
   hitbox: {fileID: 0}
   playerAnim: {fileID: 620852216}
 --- !u!114 &620852215
