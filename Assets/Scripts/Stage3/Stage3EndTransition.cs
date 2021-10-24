@@ -8,23 +8,14 @@ public class Stage3EndTransition : MonoBehaviour
     // This script contains the logic for when the Monster reaches the player
     // and transitions the scene
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public Stage3Manager s3manager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.name == "MonsterObjective")
+        if (collision.transform.tag == "Monster")
         {
             Debug.Log("Will change scene now for button mash!");
+            s3manager.monsterReached = true;
         }
     }
 

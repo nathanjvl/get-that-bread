@@ -14,6 +14,8 @@ public class Stage3Manager : MonoBehaviour
     public Animator transition; // fade out transition.
     public Image[] lives; // life bread in the UI
 
+    public bool monsterReached = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,10 @@ public class Stage3Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(monsterReached){
+            StartCoroutine(TransitionNextScene());
+        }
+
         if (lives_current <= lives_max)
         {
             if (lives_current < 3)

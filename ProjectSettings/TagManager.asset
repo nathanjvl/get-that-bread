@@ -9,6 +9,7 @@ TagManager:
   - Yeast
   - Mold
   - Obstacle
+  - Monster
   layers:
   - Default
   - TransparentFX
