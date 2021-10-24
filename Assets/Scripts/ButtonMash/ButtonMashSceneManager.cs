@@ -13,6 +13,9 @@ public class ButtonMashSceneManager : MonoBehaviour
     private float timer;
     private float currentTimer;
 
+    public GameObject bar;
+    public GameObject c;
+
     // The transition animator that is used for the fade in and out;
     public Animator transition;
 
@@ -57,6 +60,10 @@ public class ButtonMashSceneManager : MonoBehaviour
             currentTimer = 0;
             count--;
         }
+
+        bar.transform.localScale = new Vector3(count / (float)winCount, 1, 1);
+
+        c.transform.position = Vector3.Lerp(c.transform.position, new Vector3(0, 0, -15 + (count * 10 / (float)winCount)), Time.deltaTime * 5);
     }
 
     //Call when the player wins
