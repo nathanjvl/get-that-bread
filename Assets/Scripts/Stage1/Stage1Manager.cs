@@ -9,7 +9,6 @@ public class Stage1Manager : MonoBehaviour
     // This script will be used in order to keep track of the stage 1 progress and update the UI elements
     // Main implementation through count variables
 
-
     // The goal number for each ingredient
     public int milk_goal = 5;
     public int yeast_goal = 3;
@@ -69,18 +68,24 @@ public class Stage1Manager : MonoBehaviour
                 StartCoroutine(TransitionGameOver());
             }
         }
+
+        //Checking for win condition:
+        if (milk_count >= milk_goal && yeast_count >= yeast_goal && flour_count >= flour_goal)
+        {
+            StartCoroutine(TransitionNextScene()); // start to transition to the art scene
+        }
     }
 
+//These will be used for coroutines in order to transition nicely to other scenes.
     IEnumerator TransitionNextScene(){
         transition.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1); // pauses for 1 second
-        SceneManager.LoadScene("Title Screen");
+        SceneManager.LoadScene("ArtStage1ToStage3");
     }
 
     IEnumerator TransitionGameOver(){
         transition.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("Title Screen");
-
+        SceneManager.LoadScene("GameOver");
     }
 }
