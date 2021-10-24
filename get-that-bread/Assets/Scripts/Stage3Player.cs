@@ -21,6 +21,7 @@ public class Stage3Player : MonoBehaviour
     private float delay;
 
     private int height;
+    private float cooldown;
 
     // Start is called before the first frame update
     void Start()
@@ -42,9 +43,10 @@ public class Stage3Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
-            if (height < 2)
+            if (height < 2 && cooldown > 0.5f)
             {
                 height++;
+                cooldown = 0;
             } else
             {
                 //y = -2 + up;
@@ -55,9 +57,10 @@ public class Stage3Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
-            if (height > 0)
+            if (height > 0 && cooldown > 0.5f)
             {
                 height--;
+                cooldown = 0;
             } else
             {
                 //y = -2;
@@ -108,6 +111,8 @@ public class Stage3Player : MonoBehaviour
             o.transform.localPosition = new Vector3(-10, -2 + ((int)Random.Range(0, 2.99f) * 2), 0);
             o.GetComponent<Rigidbody2D>().velocity = Vector2.right * obstacleSpeed;
         }
+
+        cooldown += Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
