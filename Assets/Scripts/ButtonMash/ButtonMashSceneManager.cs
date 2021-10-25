@@ -16,6 +16,9 @@ public class ButtonMashSceneManager : MonoBehaviour
     public GameObject bar;
     public GameObject c;
 
+    public Sprite[] playerSprites;
+    public GameObject player;
+
     // The transition animator that is used for the fade in and out;
     public Animator transition;
 
@@ -36,6 +39,14 @@ public class ButtonMashSceneManager : MonoBehaviour
 
             //temporary
             Debug.Log(count);
+
+            if (player.GetComponent<SpriteRenderer>().sprite == playerSprites[0])
+            {
+                player.GetComponent<SpriteRenderer>().sprite = playerSprites[1];
+            } else
+            {
+                player.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
+            }
         }
 
         if (count >= winCount)

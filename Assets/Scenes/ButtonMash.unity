@@ -402,6 +402,10 @@ MonoBehaviour:
   winCount: 50
   bar: {fileID: 1285268900}
   c: {fileID: 455024605}
+  playerSprites:
+  - {fileID: 21300000, guid: 8fd47d430bd497147bcb5da576d5a075, type: 3}
+  - {fileID: 21300000, guid: 4e486e0745a53ab45aa468d53f914a11, type: 3}
+  player: {fileID: 1586456464}
   transition: {fileID: 1589042313}
 --- !u!4 &508978946
 Transform:
