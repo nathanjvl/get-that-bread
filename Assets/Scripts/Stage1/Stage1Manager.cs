@@ -80,7 +80,7 @@ public class Stage1Manager : MonoBehaviour
     IEnumerator TransitionNextScene(){
         transition.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1); // pauses for 1 second
-        SceneManager.LoadScene("ArtStage1ToStage3");
+        SceneManager.LoadScene("Stage3");
     }
 
     IEnumerator TransitionGameOver(){
