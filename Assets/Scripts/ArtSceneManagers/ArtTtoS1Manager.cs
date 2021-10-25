@@ -25,12 +25,12 @@ public class ArtTtoS1Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = 2;
+        timer = 3;
         z_in = -10;
 
         if (timer <= 0)
         {
-            timer = 2;
+            timer = 3;
             z_in = -10;
             currentScene++;
         }
@@ -45,7 +45,7 @@ public class ArtTtoS1Manager : MonoBehaviour
 
         if (timer <= 0)
         {
-            timer = 2;
+            timer = 3;
             z_in = -10;
             currentScene++;
         }
@@ -53,7 +53,7 @@ public class ArtTtoS1Manager : MonoBehaviour
         //c.transform.position = Vector3.Lerp(c.transform.position, new Vector3(currentScene * currentSceneMultiplier, 0, -10), Time.deltaTime * 5);
         c.transform.position = Vector3.Lerp(c.transform.position, new Vector3(currentScene * currentSceneMultiplier, 0, z_in), Time.deltaTime * 5);
 
-        if (currentScene >= 9)
+        if (currentScene >= 9 || Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(ArtT2S1()); // this will call the IEnumerator and start it
         }
