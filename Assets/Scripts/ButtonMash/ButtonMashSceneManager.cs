@@ -52,6 +52,7 @@ public class ButtonMashSceneManager : MonoBehaviour
         if (count >= winCount)
         {
             StartCoroutine(TransitionToWin());
+            count = winCount;
         } else if (count >= winCount * 0.75f)
         {
             timer = 0.15f;
