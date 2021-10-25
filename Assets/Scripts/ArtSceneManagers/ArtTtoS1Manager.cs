@@ -40,6 +40,7 @@ public class ArtTtoS1Manager : MonoBehaviour
 
     void Update()
     {
+
         timer -= Time.deltaTime;
         z_in += (Time.deltaTime)/4;
 
@@ -50,8 +51,13 @@ public class ArtTtoS1Manager : MonoBehaviour
             currentScene++;
         }
 
+
         //c.transform.position = Vector3.Lerp(c.transform.position, new Vector3(currentScene * currentSceneMultiplier, 0, -10), Time.deltaTime * 5);
-        c.transform.position = Vector3.Lerp(c.transform.position, new Vector3(currentScene * currentSceneMultiplier, 0, z_in), Time.deltaTime * 5);
+
+        if(currentScene < 9)
+        {
+            c.transform.position = Vector3.Lerp(c.transform.position, new Vector3(currentScene * currentSceneMultiplier, 0, z_in), Time.deltaTime * 5);
+        }
 
         if (currentScene >= 9 || Input.GetKeyDown(KeyCode.Space))
         {
