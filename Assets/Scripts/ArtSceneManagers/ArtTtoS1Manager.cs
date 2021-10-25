@@ -14,6 +14,7 @@ public class ArtTtoS1Manager : MonoBehaviour
     public float currentSceneMultiplier;
 
     private float timer;
+    private float z_in;
 
     public GameObject c;
 
@@ -25,10 +26,12 @@ public class ArtTtoS1Manager : MonoBehaviour
     void Start()
     {
         timer = 2;
+        z_in = -10;
 
         if (timer <= 0)
         {
             timer = 2;
+            z_in = -10;
             currentScene++;
         }
 
@@ -38,16 +41,19 @@ public class ArtTtoS1Manager : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
+        z_in += (Time.deltaTime)/4;
 
         if (timer <= 0)
         {
             timer = 2;
+            z_in = -10;
             currentScene++;
         }
 
-        c.transform.position = Vector3.Lerp(c.transform.position, new Vector3(currentScene * currentSceneMultiplier, 0, -10), Time.deltaTime * 5);
+        //c.transform.position = Vector3.Lerp(c.transform.position, new Vector3(currentScene * currentSceneMultiplier, 0, -10), Time.deltaTime * 5);
+        c.transform.position = Vector3.Lerp(c.transform.position, new Vector3(currentScene * currentSceneMultiplier, 0, z_in), Time.deltaTime * 5);
 
-        if (currentScene >= 8)
+        if (currentScene >= 9)
         {
             StartCoroutine(ArtT2S1()); // this will call the IEnumerator and start it
         }
